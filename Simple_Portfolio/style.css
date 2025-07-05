@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f5f7;
+    color: #333;
+}
+
+.main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #2e86de;
+    margin-bottom: 5px;
+}
+
+.header h3 {
+    color: #34495e;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.header h4 {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.header p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.mid,
+.edu,
+.skills,
+.projects,
+.internship,
+.contact {
+    margin-top: 30px;
+    line-height: 1.7;
+}
+
+.mid::before,
+.edu::before,
+.skills::before,
+.projects::before,
+.internship::before {
+    content: attr(class);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e86de;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills ul,
+.projects ul,
+.internship ul {
+    padding-left: 20px;
+}
+
+.skills br,
+.projects br,
+.internship br {
+    display: none;
+}
+
+.contact h1 {
+    color: #2e86de;
+    font-size: 28px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.contact p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .main {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header h3 {
+        font-size: 16px;
+    }
+
+    .contact h1 {
+        font-size: 24px;
+    }
+}

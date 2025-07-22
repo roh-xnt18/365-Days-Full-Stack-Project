@@ -1,0 +1,216 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* Root variables for colors and styling */
+:root {
+    --bg-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --accent-color: #3498db;
+    --blockquote-bg: #f0f0f0;
+}
+
+/* Global reset and base styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: var(--text-color);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    color: var(--text-color);
+}
+
+/* Paragraph */
+p {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Image */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    background-color: var(--card-bg);
+    position: relative;
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li::before {
+    content: "\2022";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--accent-color);
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Blockquote */
+blockquote {
+    font-style: italic;
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-color);
+    color: #555;
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--card-bg);
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Fade-in animations for container children */
+.container > * {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.container > *:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.container > *:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.container > *:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.container > *:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.container > *:nth-child(5) {
+    animation-delay: 1s;
+}
+.container > *:nth-child(6) {
+    animation-delay: 1.2s;
+}
+.container > *:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    p, blockquote, li {
+        padding: 10px;
+    }
+}
